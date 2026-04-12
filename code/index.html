@@ -3,121 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Pessoal - Samuel Vanoni</title>
+    <title>Samuel Vanoni | Página Pessoal</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        /* Ajustes finos para melhorar o visual */
+        body { 
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+            color: white;
+            padding: 100px 0;
+        }
+        .card {
+            border: none;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        section {
+            padding: 80px 0;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>Samuel de Oliveira Vanoni</h1>
-        <p>Estudante de Sistemas de Informação | Programador I (Data Engineer Jr.)</p>
-        <hr>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">SAMUEL VANONI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experiencia">Experiência</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-3">Samuel de Oliveira Vanoni</h1>
+            <p class="lead mb-0">Estudante de Sistemas de Informação na UFLA</p>
+            <p class="fs-4">Programador I (Data Engineer Jr.) @ Compass UOL</p>
+        </div>
     </header>
 
-    <section id="sobre">
-        <h2>Sobre Mim</h2>
-        <p>
-            Sou estudante de Sistemas de Informação apaixonado por tecnologia, com forte atuação em engenharia de dados, cloud computing e desenvolvimento de pipelines escaláveis. Tenho experiência prática na construção de arquiteturas de dados modernas (Medallion Architecture), automação e geração de insights estratégicos. Busco constantemente aprimorar minhas habilidades técnicas e contribuir com soluções eficientes em ambientes de alta performance.
-        </p>
+    <section id="sobre" class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12 text-center">
+                <h2 class="fw-bold mb-4">Sobre Mim</h2>
+                <p class="lead text-muted mx-auto" style="max-width: 800px;">
+                    Sou apaixonado por tecnologia, com forte atuação em engenharia de dados, cloud computing e desenvolvimento de pipelines escaláveis. Tenho experiência prática com Databricks, Apache Spark e AWS, atuando na construção de fluxos seguindo a arquitetura Medallion.
+                </p>
+            </div>
+        </div>
     </section>
 
-    <section id="formacao">
-        <h2>Formação Acadêmica</h2>
-        <ul>
-            <li>
-                <strong>Universidade Federal de Lavras (UFLA)</strong><br>
-                Bacharelado em Sistemas de Informação<br>
-                Previsão de conclusão: 2027/1
-            </li>
-        </ul>
+    <section id="experiencia" class="bg-white border-top border-bottom">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5">Experiência Profissional</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-8">
+                    <div class="card shadow-sm p-4 mb-4">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h4 class="fw-bold mb-0">Compass UOL</h4>
+                            <span class="text-primary fw-bold">Abr 2025 - Atual</span>
+                        </div>
+                        <h5>Programador I (Data Engineer Jr.)</h5>
+                        <p class="text-muted">Construção e manutenção de pipelines de dados escaláveis seguindo a arquitetura Medallion (Bronze, Silver, Gold) utilizando Databricks e AWS.</p>
+                    </div>
+
+                    <div class="card shadow-sm p-4">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h4 class="fw-bold mb-0">Compass UOL</h4>
+                            <span class="text-secondary fw-bold">Abr 2024 - Set 2024</span>
+                        </div>
+                        <h5>Estagiário em ML</h5>
+                        <p class="text-muted">Desenvolvimento de aplicações serverless com AWS (Lambda, API Gateway, S3) e integração entre serviços cloud.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="experiencia">
-        <h2>Experiência Profissional</h2>
-        
-        <article>
-            <h3>Compass UOL</h3>
-            <p><strong>Cargo:</strong> Programador I (Data Engineer Jr.)</p>
-            <p><em>Abr 2025 - Atual</em></p>
-            <p>
-                Atuação em projetos de engenharia de dados utilizando Databricks e AWS, com foco na construção e manutenção de pipelines de dados escaláveis. Desenvolvimento de pipelines seguindo arquitetura Medallion (Bronze, Silver, Gold), realizando ingestão, transformação e disponibilização de dados para consumo analítico e criação de dashboards.
-            </p>
-        </article>
-
-        <article>
-            <p><strong>Cargo:</strong> Estagiário em Machine Learning</p>
-            <p><em>Abr 2024 - Set 2024</em></p>
-            <p>
-                Desenvolvimento de aplicações serverless com AWS (Lambda, API Gateway, S3), integração entre serviços cloud, automação de fluxos de dados e deploy de modelos de machine learning em ambiente cloud.
-            </p>
-        </article>
+    <section id="habilidades" class="container">
+        <div class="row g-5">
+            <div class="col-md-6">
+                <h2 class="fw-bold mb-4">Habilidades Técnicas</h2>
+                <div class="mb-4">
+                    <h5 class="text-primary"><i class="bi bi-code-slash me-2"></i>Linguagens</h5>
+                    <p>Python, SQL, JavaScript</p>
+                </div>
+                <div class="mb-4">
+                    <h5 class="text-primary"><i class="bi bi-cloud me-2"></i>Cloud & Big Data</h5>
+                    <p>AWS (S3, Glue, Lambda), Databricks, Apache Spark, Arquitetura Medallion</p>
+                </div>
+                <div class="mb-4">
+                    <h5 class="text-primary"><i class="bi bi-tools me-2"></i>Ferramentas</h5>
+                    <p>Git, Docker, Terraform, MySQL, MongoDB</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="fw-bold mb-4">Formação & Certificados</h2>
+                <div class="mb-4">
+                    <h5>Bacharelado em Sistemas de Informação</h5>
+                    <p class="mb-1 text-muted">Universidade Federal de Lavras (UFLA)</p>
+                    <small>Previsão de conclusão: 2027/1</small>
+                </div>
+                <div class="p-3 border rounded bg-white shadow-sm d-flex align-items-center">
+                    <i class="bi bi-award-fill text-warning fs-1 me-3"></i>
+                    <div>
+                        <h6 class="mb-0 fw-bold">AWS Certified Cloud Practitioner</h6>
+                        <small class="text-muted">CLF-C02</small>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="certificacoes">
-        <h2>Certificações</h2>
-        <ul>
-            <li>AWS Certified Cloud Practitioner (CLF-C02)</li>
-        </ul>
+    <section id="projetos" class="bg-dark text-white">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-5">Projetos</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-secondary text-white p-3 h-100">
+                        <h5 class="fw-bold">Projeto Canaril</h5>
+                        <p class="small">Sistema com foco em organização e análise de dados.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-secondary text-white p-3 h-100">
+                        <h5 class="fw-bold">Campo Minado JS</h5>
+                        <p class="small">Lógica de programação e interatividade.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-secondary text-white p-3 h-100">
+                        <h5 class="fw-bold">Controle de Estoque</h5>
+                        <p class="small">Gerenciamento de produtos e movimentações.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-secondary text-white p-3 h-100">
+                        <h5 class="fw-bold">KNN (ML)</h5>
+                        <p class="small">Classificação de dados com Machine Learning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="habilidades">
-        <h2>Habilidades Técnicas</h2>
-        <ul>
-            <li><strong>Linguagens:</strong> Python, SQL, JavaScript, HTML e CSS</li>
-            <li><strong>Data & Big Data:</strong> Databricks, Apache Spark, Data Lakes, Medallion Architecture</li>
-            <li><strong>Cloud (AWS):</strong> S3, Glue, Athena, QuickSight, Lambda, EC2, RDS, SQS</li>
-            <li><strong>Ferramentas & DevOps:</strong> Git, GitHub, Docker, Terraform</li>
-            <li><strong>Bancos de Dados:</strong> MySQL, MongoDB</li>
-        </ul>
+    <section id="contato" class="container text-center">
+        <h2 class="fw-bold mb-5">Contato</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8 d-flex justify-content-center gap-3 flex-wrap">
+                <a href="mailto:samu.prog00@gmail.com" class="btn btn-primary btn-lg"><i class="bi bi-envelope me-2"></i>Email</a>
+                <a href="https://www.linkedin.com/in/samuelvanoni/" class="btn btn-outline-primary btn-lg"><i class="bi bi-linkedin me-2"></i>LinkedIn</a>
+                <a href="https://github.com/SamuVanoni" class="btn btn-dark btn-lg"><i class="bi bi-github me-2"></i>GitHub</a>
+            </div>
+        </div>
+        <p class="mt-4 text-muted"><i class="bi bi-telephone me-2"></i>(12) 99631-XXXX</p>
     </section>
 
-    <section id="projetos">
-        <h2>Projetos em Destaque</h2>
-        <ul>
-            <li><strong>Projeto Canaril:</strong> Desenvolvimento de sistema com foco em organização e análise de dados, modelagem estrutural e aplicação de conceitos de backend.</li>
-            <li><strong>Campo Minado:</strong> Jogo desenvolvido do zero com HTML, CSS e JS puro utilizando metodologias ágeis, com foco em lógica de programação (matrizes e recursividade) e persistência de dados local.</li>
-            <li><strong>Sistema de Controle de Estoque:</strong> Aplicação para gerenciamento de produtos e movimentações.</li>
-            <li><strong>KNN (K-Nearest Neighbors):</strong> Projeto de Machine Learning para classificação de dados.</li>
-        </ul>
-    </section>
-
-    <section id="idiomas">
-        <h2>Idiomas</h2>
-        <ul>
-            <li><strong>Inglês:</strong> Intermediário (em estudo ativo)</li>
-            <li><strong>Espanhol:</strong> Inicial</li>
-        </ul>
-    </section>
-
-    <section id="interesses">
-        <h2>Áreas de Interesse</h2>
-        <ul>
-            <li>Engenharia e Arquitetura de Dados</li>
-            <li>Cloud Computing</li>
-            <li>Automação de Processos</li>
-            <li>Inteligência Artificial & Machine Learning</li>
-        </ul>
-    </section>
-
-    <section id="contato">
-        <h2>Contato</h2>
-        <p><strong>Email:</strong> samu.prog00@gmail.com</p>
-        <p><strong>Telefone:</strong> (12) 99631-XXXX</p>
-        <p>
-            <strong>LinkedIn:</strong>
-            <a href="https://www.linkedin.com/in/samuelvanoni/" target="_blank">
-                linkedin.com/in/samuelvanoni
-            </a>
-        </p>
-        <p>
-            <strong>GitHub:</strong>
-            <a href="https://github.com/samuvanoni" target="_blank">
-                github.com/samuvanoni
-            </a>
-        </p>
-    </section>
-
-    <footer>
-        <hr>
-        <p>&copy; 2026 Samuel Vanoni. Todos os direitos reservados.</p>
+    <footer class="bg-dark text-white-50 py-4 text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Samuel Vanoni. Todos os direitos reservados.</p>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
