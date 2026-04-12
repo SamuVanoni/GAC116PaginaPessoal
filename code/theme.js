@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeIcon = document.getElementById('theme-icon');
     const htmlElement = document.documentElement;
 
-    // 1. Verifica se o usuário já tem um tema salvo de visitas anteriores
+    // 1. Verifica se o usuário já tem um tema salvo (compartilhado com Tailwind)
     const savedTheme = localStorage.getItem('portfolio_theme') || 'light';
     applyTheme(savedTheme);
 
@@ -16,21 +16,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Função que faz a mudança visual e salva a preferência
     function applyTheme(theme) {
-        // Altera o atributo no HTML que o Bootstrap usa para pintar a tela
+        // Altera o atributo no HTML
         htmlElement.setAttribute('data-bs-theme', theme);
         
         // Salva a escolha do usuário
         localStorage.setItem('portfolio_theme', theme);
 
-        // Troca o ícone do botão
+        // Troca o ícone e ajusta a borda do botão para contraste
         if (theme === 'dark') {
-            themeIcon.classList.remove('bi-moon-stars-fill');
-            themeIcon.classList.add('bi-sun-fill');
-            themeToggleBtn.classList.replace('btn-outline-dark', 'btn-outline-light');
+            themeIcon.classList.replace('bi-moon-stars-fill', 'bi-sun-fill');
+            themeToggleBtn.classList.remove('btn-outline-secondary');
+            themeToggleBtn.classList.add('btn-outline-light');
         } else {
-            themeIcon.classList.remove('bi-sun-fill');
-            themeIcon.classList.add('bi-moon-stars-fill');
-            themeToggleBtn.classList.replace('btn-outline-light', 'btn-outline-dark');
+            themeIcon.classList.replace('bi-sun-fill', 'bi-moon-stars-fill');
+            themeToggleBtn.classList.remove('btn-outline-light');
+            themeToggleBtn.classList.add('btn-outline-secondary');
         }
     }
 });
