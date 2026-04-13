@@ -1,4 +1,4 @@
-# 👨‍💻 Portfólio Pessoal - Web Programming
+# 👨‍💻 Portfólio Pessoal
 
 ## 🚀 Sobre o Projeto
 
